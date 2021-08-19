@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.containerBody{padding: 35px;margin: 35px;}
+/*.contentCenter{text-align: center;justify-content: center;}*/
+.textarea-container{    padding-top: 10px;}
+.textarea-container textarea, input.mat-input-element{outline: none; box-shadow: 0px 1px 1px #5f9ea0;color: cadetblue;width: -webkit-fill-available; padding: 20px; margin: 8px; border: 1px solid cadetblue; border-radius: 12px;}
+.row-padding{padding: 15px;}
+.mat-card .mat-card-header,contentCenter{text-align: center;justify-content: center;}
+.create-entry-btn{    box-shadow: 0px 3px 7px #5f9ea0; background: white;color: cadetblue; border: 1px solid cadetblue !important;}
+.create-entry-btn .mat-icon{margin-top: 7px;}
+.create-entry-btn-row{    padding-top: 10px;display: flex;    align-items: center;    justify-content: center;}
+.save-entry-button{    box-shadow: 0px 3px 7px #5f9ea0; background: cadetblue; color: white;width: 120px;     padding: 2px !important;  margin-left: 86% !important;}
+.save-entry-button-row{display: flex;justify-content: center;}
+.mat-tab-body-content{overflow: hidden !important;}
+.mat-tab-label .mat-tab-label-content{    color: cadetblue;}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {background-color: #5f9ea0;}
+.freq-srch-button,.similar-srch-button{    box-shadow: 0px 3px 7px #5f9ea0; background: cadetblue; color: white;width: auto; }
+.freq-srch-button{float:right}
+.similar-srch-button{float:left}
+.srch-button-row{padding: 10px 0px 15px 0px;}
+.outputCol,.outputVal{border: 2px solid cadetblue;  font-size: 15px; font-weight: 500; color: cadetblue;  }
+.outputCol{border-right: none; text-align: center;}
+.cdk-overlay-pane{    margin-bottom: 170px !important;}
+.containerMat{    box-shadow: 0px 0px 1px 1px cadetblue  !important;}
+.mat-card-header .mat-card-title{color: cadetblue;font-weight: bold;font-size: 22px;letter-spacing: 2px;text-shadow: beige;text-shadow: 2px 2px #c7bfbf;}
+.textarea-container .mat-icon{float: right;    margin-right: 13px;    color: cadetblue;    font-weight: 400;    cursor: pointer;}

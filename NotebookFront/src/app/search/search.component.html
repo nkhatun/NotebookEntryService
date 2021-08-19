@@ -1,0 +1,84 @@
+<div class="container containerBody">
+    <mat-card class="contentCenter containerMat">
+        <mat-card-header>
+                        <mat-card-title>Notebook Entry Demo Task</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                   
+    <div class="row row-padding">
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Notebook Entry">
+                             <mat-card class="contentCenter">
+                                      <mat-card-content>
+                        <div class="row create-entry-btn-row">
+                            <button mat-button (click)="createEntry()" class="create-entry-btn">
+                    <span>Create Notebook Entry</span><span> <mat-icon>note_add</mat-icon></span>  
+                </button>
+                        </div>
+                        <div class="row" *ngIf="panelVisible">
+                            <div class="textarea-container" *ngFor="let entry of entries; let i = index">
+                                <span (click)="deleteEntry(i)"><mat-icon>delete_outline</mat-icon></span>
+                                <textarea matInput [placeholder]="'Write Your Entry Text Here'" #f (change)="onTextChange(f.value,i)"></textarea>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-actions *ngIf="panelVisible">
+                        <div class="row save-entry-button-row ">
+                            <button mat-button (click)="saveEntry()" class="save-entry-button">
+                    <span>Save</span>  
+                </button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-tab>
+            
+            <mat-tab label="New Features">
+ <ng-template mat-tab-label>
+                   New Features &nbsp;
+                                    <mat-icon>new_releases</mat-icon>
+                </ng-template>
+                <mat-card>
+                   
+                    <mat-card-content>
+                        <div class="row">
+                            <input matInput [placeholder]="'Enter search word here'" class="searchInput" #freqSearch>
+                        </div>
+                        <div class="row srch-button-row">
+                            <div class="col-sm-6">
+                                <button mat-button (click)="searchFreqOccur(freqSearch.value)" class="freq-srch-button">
+                    <span>Frquency Search</span>  
+                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button mat-button (click)="searchSimilarWords(freqSearch.value)" class="similar-srch-button">
+                    <span>Similar Word Search</span>  
+                </button>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="(freqResponse != undefined) && (freqResponse.length != 0)">
+                            <div class="col-sm-6 outputCol">
+                            <span>Frequency</span>
+                            </div>
+                            <div class="col-sm-6 outputVal">
+                                 <span> {{freqResponse.frequency}} </span>
+                            </div>
+                        </div>
+                        <div class="row " *ngIf="(similarWordResponse != undefined) && (similarWordResponse.length != 0)">
+                            <div class="col-sm-6 outputCol">
+                            <span>Similar Words</span>
+                            </div>
+                            <div class="col-sm-6 outputVal">
+                                 <span> {{similarWordResponse.similarWords}} </span>
+                            </div>
+                        </div>
+
+                    </mat-card-content>
+                </mat-card>
+
+            </mat-tab>
+        </mat-tab-group>
+
+    </div>
+     </mat-card-content>
+    </mat-card>
+</div>
